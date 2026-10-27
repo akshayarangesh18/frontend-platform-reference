@@ -1,0 +1,11 @@
+{
+  "name": "@frontend-platform/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared TypeScript configurations across the workspace",
+  "files": [
+    "base.json",
+    "react-library.json",
+    "package.json"
+  ]
+}
