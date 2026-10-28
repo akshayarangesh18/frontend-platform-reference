@@ -76,7 +76,7 @@ Purges all generated `dist/` directories across packages.
 ## 🗺 Implementation Roadmap
 
 - [x] **Phase 1: Foundation & Tooling Scaffolding** — pnpm workspaces, Turborepo caching, shared tsconfig, runnable smoke test.
-- [ ] **Phase 2: Design Token Pipeline** — W3C DTCG multi-tier tokens (Global, Semantic, Theme), Style Dictionary / compiler, CSS custom properties & TS types.
+- [x] **Phase 2: Design Token Pipeline** — W3C DTCG multi-tier tokens (Global, Semantic, Theme), Style Dictionary / compiler, CSS custom properties & TS types.
 - [ ] **Phase 3: Token Governance & CI Drift Detection** — Automated drift verification in CI (`git diff --exit-code`), token schema validation.
 - [ ] **Phase 4: Component Library Architecture** — Zero-runtime CSS Modules + CVA, `@radix-ui/react-slot` (`asChild` pattern), WAI-ARIA accessibility primitives (`Button`, `Text`, `Stack`).
 - [ ] **Phase 5: Documentation & Showcase** — Live interactive playground, theme switcher, token visualizer.
