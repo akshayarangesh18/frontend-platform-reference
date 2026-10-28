@@ -81,3 +81,4 @@ Purges all generated `dist/` directories across packages.
 - [ ] **Phase 4: Component Library Architecture** — Zero-runtime CSS Modules + CVA, `@radix-ui/react-slot` (`asChild` pattern), WAI-ARIA accessibility primitives (`Button`, `Text`, `Stack`).
 - [ ] **Phase 5: Documentation & Showcase** — Live interactive playground, theme switcher, token visualizer.
 - [ ] **Phase 6: Release Engineering & Consumer Contract** — Subpath exports (`package.json#exports`), tree-shaking validation, Changesets release flow.
+

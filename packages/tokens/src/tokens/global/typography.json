@@ -1,0 +1,36 @@
+{
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "$value": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+        "$type": "fontFamily"
+      },
+      "mono": {
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace",
+        "$type": "fontFamily"
+      }
+    },
+    "fontSize": {
+      "xs": { "$value": "0.75rem", "$type": "dimension", "$description": "12px" },
+      "sm": { "$value": "0.875rem", "$type": "dimension", "$description": "14px" },
+      "base": { "$value": "1rem", "$type": "dimension", "$description": "16px" },
+      "lg": { "$value": "1.125rem", "$type": "dimension", "$description": "18px" },
+      "xl": { "$value": "1.25rem", "$type": "dimension", "$description": "20px" },
+      "2xl": { "$value": "1.5rem", "$type": "dimension", "$description": "24px" },
+      "3xl": { "$value": "1.875rem", "$type": "dimension", "$description": "30px" },
+      "4xl": { "$value": "2.25rem", "$type": "dimension", "$description": "36px" }
+    },
+    "fontWeight": {
+      "regular": { "$value": "400", "$type": "fontWeight" },
+      "medium": { "$value": "500", "$type": "fontWeight" },
+      "semibold": { "$value": "600", "$type": "fontWeight" },
+      "bold": { "$value": "700", "$type": "fontWeight" }
+    },
+    "lineHeight": {
+      "none": { "$value": "1", "$type": "lineHeight" },
+      "tight": { "$value": "1.25", "$type": "lineHeight" },
+      "normal": { "$value": "1.5", "$type": "lineHeight" },
+      "relaxed": { "$value": "1.75", "$type": "lineHeight" }
+    }
+  }
+}

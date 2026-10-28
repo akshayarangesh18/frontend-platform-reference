@@ -1,0 +1,10 @@
+{
+  "radii": {
+    "none": { "$value": "0px", "$type": "dimension" },
+    "sm": { "$value": "0.125rem", "$type": "dimension", "$description": "2px" },
+    "md": { "$value": "0.25rem", "$type": "dimension", "$description": "4px" },
+    "lg": { "$value": "0.5rem", "$type": "dimension", "$description": "8px" },
+    "xl": { "$value": "0.75rem", "$type": "dimension", "$description": "12px" },
+    "full": { "$value": "9999px", "$type": "dimension" }
+  }
+}
