@@ -7,6 +7,9 @@
   "scripts": {
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:drift": "turbo run test:drift",
+    "validate": "turbo run validate",
     "clean": "turbo run clean"
   },
   "devDependencies": {
@@ -14,4 +17,3 @@
     "typescript": "^5.7.3"
   }
 }
-

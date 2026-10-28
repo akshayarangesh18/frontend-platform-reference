@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-and-build:
+    name: Validate, Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🛡️ Validate Token Governance Rules
+        run: pnpm validate
+
+      - name: 🔍 Verify Token Drift
+        run: pnpm test:drift
+
+      - name: 📐 Run Type Checking
+        run: pnpm typecheck
+
+      - name: 🧪 Run Test Suites
+        run: pnpm test
+
+      - name: 🏗️ Build Workspace Packages
+        run: pnpm build
+
+      - name: 🧼 Verify Git Workspace Purity
+        run: |
+          git status --porcelain
+          git diff --exit-code

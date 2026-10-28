@@ -21,7 +21,9 @@
     "build": "pnpm run build:tokens && tsc",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "clean": "rm -rf dist"
+    "test:drift": "tsx scripts/check-drift.ts",
+    "validate": "tsx scripts/validate-tokens.ts",
+    "clean": "rm -rf dist src/generated"
   },
   "devDependencies": {
     "@frontend-platform/tsconfig": "workspace:*",

@@ -20,9 +20,16 @@
       "inputs": ["$TURBO_DEFAULT$"],
       "outputs": []
     },
+    "validate": {
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": []
+    },
+    "test:drift": {
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": []
+    },
     "clean": {
       "cache": false
     }
   }
 }
-

@@ -85,3 +85,4 @@ export function generateTypeScript(
 
   return lines.join("\n");
 }
+

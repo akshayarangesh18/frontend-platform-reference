@@ -46,3 +46,4 @@ export interface CompilerResult {
   css: string;
   tsCode: string;
 }
+

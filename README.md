@@ -54,7 +54,17 @@ pnpm typecheck
 
 Runs `tsc --noEmit` across all workspace packages according to topological dependency order.
 
-### 4. Clean Artifacts
+### 4. Token Governance & Drift Detection
+
+```bash
+# Validate token rules (no raw hex in semantic tokens, theme parity, valid references)
+pnpm validate
+
+# Check that committed dist artifacts match source JSON definitions
+pnpm test:drift
+```
+
+### 5. Clean Artifacts
 
 ```bash
 pnpm clean
@@ -76,8 +86,8 @@ Purges all generated `dist/` directories across packages.
 ## 🗺 Implementation Roadmap
 
 - [x] **Phase 1: Foundation & Tooling Scaffolding** — pnpm workspaces, Turborepo caching, shared tsconfig, runnable smoke test.
-- [x] **Phase 2: Design Token Pipeline** — W3C DTCG multi-tier tokens (Global, Semantic, Theme), Style Dictionary / compiler, CSS custom properties & TS types.
-- [ ] **Phase 3: Token Governance & CI Drift Detection** — Automated drift verification in CI (`git diff --exit-code`), token schema validation.
+- [x] **Phase 2: Design Token Pipeline** — W3C DTCG multi-tier tokens (Global, Semantic, Theme), token compiler, CSS custom properties & TS types.
+- [x] **Phase 3: Token Governance & CI Drift Detection** — Automated drift verification in CI (`git diff --exit-code`), architectural governance rules (semantic discipline, theme parity).
 - [ ] **Phase 4: Component Library Architecture** — Zero-runtime CSS Modules + CVA, `@radix-ui/react-slot` (`asChild` pattern), WAI-ARIA accessibility primitives (`Button`, `Text`, `Stack`).
 - [ ] **Phase 5: Documentation & Showcase** — Live interactive playground, theme switcher, token visualizer.
 - [ ] **Phase 6: Release Engineering & Consumer Contract** — Subpath exports (`package.json#exports`), tree-shaking validation, Changesets release flow.
