@@ -23,7 +23,7 @@
     "test": "vitest run",
     "test:drift": "tsx scripts/check-drift.ts",
     "validate": "tsx scripts/validate-tokens.ts",
-    "clean": "rm -rf dist src/generated"
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@frontend-platform/tsconfig": "workspace:*",

@@ -44,7 +44,7 @@ export function checkDrift(): boolean {
     prefix: "--fp"
   });
 
-  const cssPath = path.join(packageRoot, "dist/css/tokens.css");
+  const cssPath = path.join(packageRoot, "src/generated/tokens.css");
   const tsPath = path.join(packageRoot, "src/generated/tokens.ts");
 
   let hasDrift = false;
@@ -87,4 +87,3 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const clean = checkDrift();
   process.exit(clean ? 0 : 1);
 }
-

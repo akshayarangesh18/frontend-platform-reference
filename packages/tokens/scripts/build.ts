@@ -48,19 +48,22 @@ export function runBuild() {
   fs.mkdirSync(distCssDir, { recursive: true });
   fs.mkdirSync(generatedDir, { recursive: true });
 
-  // Write outputs
-  const cssPath = path.join(distCssDir, "tokens.css");
+  // Write outputs (both committed source generated and dist/ consumer paths)
+  const distCssPath = path.join(distCssDir, "tokens.css");
+  const srcCssPath = path.join(generatedDir, "tokens.css");
   const tsPath = path.join(generatedDir, "tokens.ts");
 
-  fs.writeFileSync(cssPath, result.css, "utf-8");
+  fs.writeFileSync(distCssPath, result.css, "utf-8");
+  fs.writeFileSync(srcCssPath, result.css, "utf-8");
   fs.writeFileSync(tsPath, result.tsCode, "utf-8");
 
   console.log(`✅ Design Tokens compiled successfully:`);
   console.log(`   - Global tokens:   ${result.globalTokens.length}`);
   console.log(`   - Semantic tokens: ${result.semanticTokens.length}`);
   console.log(`   - Dark overrides:  ${result.darkThemeTokens.length}`);
-  console.log(`   -> CSS output:     ${path.relative(packageRoot, cssPath)}`);
-  console.log(`   -> TS definitions: ${path.relative(packageRoot, tsPath)}`);
+  console.log(`   -> Dist CSS output: ${path.relative(packageRoot, distCssPath)}`);
+  console.log(`   -> Src CSS output:  ${path.relative(packageRoot, srcCssPath)}`);
+  console.log(`   -> TS definitions:  ${path.relative(packageRoot, tsPath)}`);
 
   return result;
 }
@@ -69,4 +72,3 @@ export function runBuild() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   runBuild();
 }
-
