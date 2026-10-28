@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build:tokens": "tsx scripts/build.ts",
-    "build": "pnpm run build:tokens && tsc",
+    "build": "pnpm run build:tokens && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:drift": "tsx scripts/check-drift.ts",

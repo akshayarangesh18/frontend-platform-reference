@@ -64,3 +64,4 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const success = runValidation();
   process.exit(success ? 0 : 1);
 }
+

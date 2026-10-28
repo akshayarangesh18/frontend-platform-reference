@@ -106,3 +106,4 @@ describe("Token Governance & Validation Rules", () => {
     expect(report.errors[0].message).toContain('references "color.ghost.primitive"');
   });
 });
+
